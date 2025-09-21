@@ -1,0 +1,3 @@
+function checkIfHslIsSupported() {
+  return;
+}
