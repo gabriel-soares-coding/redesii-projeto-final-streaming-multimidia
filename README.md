@@ -26,6 +26,12 @@ mkdir hls assets/video
 # Executar com o nome do arquivo que se deseja converter
 ffmpeg -i .\assets\video\<nome-do-video-a-ser-convertido>.mp4 -profile:v baseline -level 3.0 -start_number 0 -hls_time 4 -hls_list_size 0 -f hls .\hls\stream.m3u8
 
+cd frontend
+
+npm run build
+
+cd ..
+
 docker compose up -d --build
 ```
 
