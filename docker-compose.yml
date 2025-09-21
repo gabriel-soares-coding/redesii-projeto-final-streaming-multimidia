@@ -1,5 +1,14 @@
 services:
-  web:
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"   # Vite Dev Server
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    command: ["npm", "run", "dev", "--", "--host"]
+
+  nginx:
     image: nginx:alpine
     ports:
       - "8080:80"
