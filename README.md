@@ -28,6 +28,8 @@ ffmpeg -i .\assets\video\<nome-do-video-a-ser-convertido>.mp4 -profile:v baselin
 
 cd frontend
 
+npm install
+
 npm run build
 
 cd ..
